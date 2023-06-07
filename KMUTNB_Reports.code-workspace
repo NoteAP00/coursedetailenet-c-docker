@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "E:/MyHTML/KMUTNB_Reports"
+		},
+		{
+			"path": "E:/Rust/kmutnb-cn-apinun-33"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../WebAppEnetC"
+		},
+		{
+			"path": "E:/Rust/kmutnb-cn-apinun-33/WebServer/web-app"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "SE_pro-"
+	}
+}
