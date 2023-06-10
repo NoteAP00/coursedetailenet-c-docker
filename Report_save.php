@@ -14,7 +14,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $stmt = $conn->prepare("INSERT INTO AdminDB (Topic, ID, Detail) VALUES (:topic, :courseID, :detail)");
+    $stmt = $conn->prepare("INSERT INTO admindb (Topic, ID, Detail) VALUES (:topic, :courseID, :detail)");
     $stmt->bindParam(':topic', $topic);
     $stmt->bindParam(':courseID', $courseID);
     $stmt->bindParam(':detail', $detail);

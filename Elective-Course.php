@@ -56,7 +56,6 @@ session_start();
         unset($_POST['CourseID']);
 
 
-       new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);$host = 'db_mysql';
        $dbname = "se_db";
        $dbusername = "web";
        $dbpassword = "web1234";
@@ -94,7 +93,7 @@ session_start();
                             <?php
                             $CourseID = str_replace('X', '%', $CourseID);
                             $CourseID = str_replace('x', '%', $CourseID);
-                            $sql = "SELECT CourseID, CourseName FROM CourseDB WHERE CourseID LIKE :CourseID AND CourseName NOT LIKE '%Elective%'";
+                            $sql = "SELECT CourseID, CourseName FROM coursedb WHERE CourseID LIKE :CourseID AND CourseName NOT LIKE '%Elective%'";
                             $stmt = $conn->prepare($sql);
 
                             // Bind the CourseID parameter to the placeholder

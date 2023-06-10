@@ -149,7 +149,7 @@ if ($ro != "Admin") {
         <h5 class="my-3">studentDB</h5>
       </center>
       <?php
-      $query = "SELECT * FROM studentDB";
+      $query = "SELECT * FROM studentdb";
       $result = $conn->query($query);
       if ($result->rowCount() > 0) {
         echo "<table class='table table-striped table-hover'>";

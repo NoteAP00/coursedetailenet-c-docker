@@ -60,10 +60,6 @@ isset($_SESSION['role']) ? $ro = $_SESSION['role'] : $ro = "";
 
 
 
-        $newUrl = 'http://noteapinun.trueddns.com:28501/SE_Pro-/testDetailForm.php?CourseID=' . $CourseID;
-        //unset($_POST['CourseID']);
-
-
         $host = 'db_mysql';
         $dbname = "se_db";
         $dbusername = "web";
@@ -98,7 +94,7 @@ isset($_SESSION['role']) ? $ro = $_SESSION['role'] : $ro = "";
                             </div>
                             <div class="card-subtitle">
                                 <?php
-                                $sql = "SELECT CourseName FROM CourseDB WHERE CourseID = :CourseID";
+                                $sql = "SELECT CourseName FROM coursedb WHERE CourseID = :CourseID";
                                 $stmt = $conn->prepare($sql);
 
                                 // Bind the CourseID parameter to the placeholder
@@ -118,7 +114,7 @@ isset($_SESSION['role']) ? $ro = $_SESSION['role'] : $ro = "";
                             <div class="card-title">
 
                                 <h5><?php
-                                    $sql = "SELECT CourseDetail FROM CourseDB WHERE CourseID = :CourseID";
+                                    $sql = "SELECT CourseDetail FROM coursedb WHERE CourseID = :CourseID";
                                     $stmt = $conn->prepare($sql);
 
                                     // Bind the CourseID parameter to the placeholder
@@ -233,12 +229,12 @@ isset($_SESSION['role']) ? $ro = $_SESSION['role'] : $ro = "";
 
 
         // create database connection
-        $host = "noteapinun.trueddns.com";
-        $dbport = "28502";
+        $host = 'db_mysql';
         $dbname = "se_db";
         $dbusername = "web";
         $dbpassword = "web1234";
-        $conn = new PDO("mysql:host=$host;port=$dbport;dbname=$dbname", $dbusername, $dbpassword);
+        $conn = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         ?>
             <?php

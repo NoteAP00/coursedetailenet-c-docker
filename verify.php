@@ -17,7 +17,7 @@ $host = 'db_mysql';
   isset($_POST['pwd']) ? $p = $_POST['pwd'] : $p = "";
   if(isset($_POST['email']) && isset($_POST['pwd'])){
     $shapass = sha1($p);
-    $query = "SELECT * FROM studentDB WHERE Email='{$u}' AND Password='{$shapass}'";
+    $query = "SELECT * FROM studentdb WHERE Email='{$u}' AND Password='{$shapass}'";
     $result = $conn->query($query);
     if($result->rowCount()==1){
       // Valid login credentials

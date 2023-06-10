@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST['pwd'];
 
     // Prepare SQL statement to insert data into "students" table
-    $sql = "INSERT INTO StudentDB (StudentID,StudentName, Email, Password,Role) VALUES ('-','$name', '$email', '$password','')";
+    $sql = "INSERT INTO studentdb (StudentID,StudentName, Email, Password,Role) VALUES ('-','$name', '$email', '$password','')";
 
     // Execute SQL statement
     if (mysqli_query($conn, $sql)) {

@@ -49,7 +49,7 @@ if (isset($_POST['CourseID']) && !empty($_POST['CourseID'])) {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "SELECT * FROM courseDB WHERE CourseID = :CourseID";
+    $sql = "SELECT * FROM coursedb WHERE CourseID = :CourseID";
 
     // Prepare the query
     $stmt = $conn->prepare($sql);
