@@ -78,7 +78,7 @@ isset($_SESSION['role']) ? $ro = $_SESSION['role'] : $ro = "";
                             <div class="card-title">
                                 <h4 class="bi bi-person-circle">
                                     <?php
-                                    $sql = "SELECT CourseID FROM CourseDB WHERE CourseID = :CourseID";
+                                    $sql = "SELECT CourseID FROM coursedb WHERE CourseID = :CourseID";
                                     $stmt = $conn->prepare($sql);
 
                                     // Bind the CourseID parameter to the placeholder
