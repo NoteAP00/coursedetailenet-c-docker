@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.1.37",
+            "port": 28502,
+            "driver": "MySQL",
+            "name": "nb",
+            "database": "se_db",
+            "username": "root",
+            "password": "rootpassword1212312121"
+        }
+    ]
+}
