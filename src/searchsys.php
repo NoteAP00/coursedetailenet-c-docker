@@ -7,7 +7,7 @@ $host = 'db_mysql';
     
 
 $conn = mysqli_connect($host, $dbusername, $dbpassword, $dbname);
-
+mysqli_set_charset($connection, 'utf8');
 
 
 // get search option and search term from POST data
